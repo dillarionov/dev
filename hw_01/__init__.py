@@ -1,4 +1,5 @@
 import time
+import math
 from functools import wraps
 from collections import namedtuple, deque, Counter
 
@@ -120,3 +121,7 @@ class Swapper():
             return d[x]
         except:  # catch all exceptions
             return 1
+
+    def swap12(self, x=1):
+        """Simple substracion"""
+        return math.fabs(x - 3)
