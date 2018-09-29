@@ -9,6 +9,7 @@ from hw_01 import (
     ObjIterator,
     even_nums,
     print_exec_duration,
+    Swapper,
 )
 
 
@@ -83,6 +84,18 @@ class TestPrintExecDuration(unittest.TestCase):
                 self.sleep(i)
             self.assertEqual(len(output), 1)
             self.assertGreaterEqual(float(output[0]), i)
+
+
+class TestSwapper(unittest.TestCase):
+    def setUp(self):
+        self.swapper = Swapper()
+
+    def test_swap(self):
+        # gather swappers
+        fs = [getattr(self.swapper, 'swap%i' % i) for i in range(1, 12)]
+        for f in fs:
+            self.assertEqual(f(1), 2)
+            self.assertEqual(f(2), 1)
 
 
 if __name__ == '__main__':
