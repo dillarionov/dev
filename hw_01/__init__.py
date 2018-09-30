@@ -142,3 +142,8 @@ class Swapper():
             r = i
 
         return i
+
+    def swap14(self, x=1):
+        """Another math trick!
+        """
+        return x * 2 / x / x
