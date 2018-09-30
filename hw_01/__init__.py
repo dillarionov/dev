@@ -123,5 +123,22 @@ class Swapper():
             return 1
 
     def swap12(self, x=1):
-        """Simple substracion"""
-        return math.fabs(x - 3)
+        """Simple subtraction
+        """
+        return math.fabs(x - 3)  # or 3 - x
+
+    def swap13(self, x=1):
+        """Deque rotate in generator
+        """
+
+        def gen(x=1):
+            d = deque([1, 2])
+            for i in range(0, x):
+                d.rotate()
+                yield d[0]
+
+        r = 1
+        for i in gen(x):
+            r = i
+
+        return i
