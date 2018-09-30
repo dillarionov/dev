@@ -92,7 +92,7 @@ class TestSwapper(unittest.TestCase):
 
     def test_swap(self):
         # gather swappers
-        fs = [getattr(self.swapper, 'swap%i' % i) for i in range(1, 16)]
+        fs = [getattr(self.swapper, 'swap%i' % i) for i in range(1, 17)]
         for f in fs:
             self.assertEqual(f(1), 2)
             self.assertEqual(f(2), 1)

@@ -146,9 +146,8 @@ class Swapper():
     def swap14(self, x=1):
         """Another math trick!
         """
-        return x * 2 / x / x
+        # return x * 2 / x / x
+        return 2 / x
 
     def swap15(self, x=1):
-        """Another math trick!
-        """
-        return 2 / x
+        return 17 % (x + 2)
